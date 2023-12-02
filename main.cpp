@@ -67,6 +67,9 @@ int main()
 
 				Driver::wpm(clientSoldierEntity + 0x324, 241);
 			}
+			else if (playerTeamId == myTeamId) {
+				Driver::wpm(clientSoldierEntity + 0x324, 0);
+			}
 		}
 		std::cout << std::endl;
 		std::cout << std::endl;
