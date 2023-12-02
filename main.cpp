@@ -43,7 +43,6 @@ int main()
 
 			myTeamId = Driver::rpm<uint8_t>(client + 0x1C34);
 		}
-		delete[] name;
 	}
 
 	std::cout << myTeamId << std::endl;
@@ -65,20 +64,14 @@ int main()
 			if (playerTeamId != myTeamId && hp > 0.1f) {
 				std::cout << "client: " << std::hex << client << std::endl;
 				char* name = p->getPlayerName(i);
-				/*for (int k = 0; k < 5; k++) {
-					std::cout << *(name+k);
-				}*/
-				std::cout << name <<  std::endl;
-				delete[] name;
-				//std::cout << "teamId: " << playerTeamId << std::endl;
 
-
-				//BYTE x[] = { 0xf1 };
-				//Driver::wpm(clientSoldierEntity + 0x324, x);
+				Driver::wpm(clientSoldierEntity + 0x324, 241);
 			}
 		}
+		std::cout << std::endl;
+		std::cout << std::endl;
 
-		Sleep(5000);
+		Sleep(540);
 	}
 	
 

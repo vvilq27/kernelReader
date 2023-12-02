@@ -96,11 +96,11 @@ public:
 
 		//std::cout << "client: " << std::hex << client << std::endl;
 
-		char* nameDrv = Driver::readString(client + 0x40);
-		//std::cout << name << std::endl;
+		char* name = Driver::readString(client + 0x40);
+		std::cout << name << std::endl;
 
-		char* name = new char[10]; // Allocate memory (replace with appropriate size)
-		strcpy_s(name, 10, nameDrv);
+		//char* name = new char[10]; // Allocate memory (replace with appropriate size)
+		//strcpy_s(name, 10, nameDrv);
 
 		return name;
 	}
